@@ -10,8 +10,8 @@ const dashboardRoutes = {
       element: <Home />,
     },
     {
-      path: "/dashboard/create-product",
-      element: <Home />,
+      path: "/dashboard/product",
+      element: <Product />,
     },
   ],
 };

@@ -1,44 +1,20 @@
+
 import "./Home.css";
 function Home() {
-  const addProduct = () => {
-    const formProduct = document.forms[0];
-    const formData = new FormData(formProduct);
-    const product = Object.fromEntries(formData);
-    console.log(product);
-    createProduc(product);
-  };
-
-  const createProduc = (product) => {
-    fetch("", {
-      method: "post",
-      body: JSON.stringify(product),
-    });
-  };
-
   return (
     <>
-      <form id="form-product">
-        <div className="form-controller row">
-          <label htmlFor="product_name">Nome do produdo</label>
-          <input type="text" name="product_name" />
+    <div className="hightlights gap-3 d-flex justify-content-between">
+      <div className="card w-100">
+        <div className="card-bory d-flex">
+          <img className="icon-dollar" src={DollarIcon} alt="" />
+          <div className="info">
+          <p className="fw-light">Total De vendas</p>
+          <p className="fs-2">R$ 2.549,78</p>
         </div>
-        <div className="form-controller row">
-          <label htmlFor="product_name">Marca</label>
-          <input type="text" name="brand" />
-        </div>
-        <div className="form-controller row">
-          <label htmlFor="product_name">Descrição</label>
-          <input type="text" name="description" />
-        </div>
-        <div className="form-controller row">
-          <label htmlFor="product_name">Quantidade</label>
-          <input type="text" name="quantity" />
-        </div>
-        <button type="button" onClick={addProduct}>
-          Cadastrar
-        </button>
-      </form>
-    </>
+      </div>
+    </div>
+    </div>
+  </>
   );
 }
 
