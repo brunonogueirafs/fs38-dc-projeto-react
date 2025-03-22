@@ -13,7 +13,7 @@ function Login() {
     })
       .then((response) => response.json())
       .then((response) => {
-        localStorage.setItem("token", JSON.stringify(response));
+        localStorage.setItem("token", response.token);
       });
   }
   return (
